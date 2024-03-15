@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle elevation */
+  height: 70vh; /* Half the screen height */
+  width: 50vw; /* Half the screen width */
+  padding: 20px;
+  margin: auto;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
+  overflow-y: auto; /* Allow content to scroll if necessary */
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subheading {
+  font-size: 16px;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  flex: 1; /* Take remaining space */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-container {
+  margin-top: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
