@@ -1,16 +1,30 @@
-import React from 'react';
-import './App.css';
-import PieChart from './PieChart';
+import React from "react";
+import "./App.css";
+import ChartCard from "./ChartCard";
+import { Chart, ArcElement } from "chart.js";
+import PieChart from "./PieChart";
+Chart.register(ArcElement);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Simple Pie Chart</h1>
-      </header>
-      <main>
-        <PieChart />
-      </main>
+      <div className="charts-container">
+        <ChartCard
+          title="Sub-Category"
+          description="The assets are ditributed between equity and cash & equivalents"
+          chart={<PieChart />}
+        />
+        <ChartCard
+          title="Sub-Category"
+          description="The assets are ditributed between equity and cash & equivalents"
+          chart={<PieChart />}
+        />
+        <ChartCard
+          title="Sub-Category"
+          description="The assets are ditributed between equity and cash & equivalents"
+          chart={<PieChart />}
+        />
+      </div>
     </div>
   );
 }
